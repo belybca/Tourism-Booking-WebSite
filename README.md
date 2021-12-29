@@ -6,5 +6,5 @@ In this website the user can know more about ten countries in South America, all
 # o	JavaScript ( Date, RegExp, math, cookie, jQuery)
 # o	CSS
 # o Image Maps
-# o	Key wordsearch
+# o	Keyword search
 # o Image Maps
