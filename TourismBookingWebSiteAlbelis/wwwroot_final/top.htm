@@ -1,0 +1,58 @@
+<!--
+Description: Project Web Client Development 30%
+			 Top : Top page contains the login form
+Name: Albelis Becea
+ID: 2110083
+Date: July 23, 2021
+VALIDATED 
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+<head>
+   <title>Mochileros - Latin America</title>
+   <script language="javascript" src="login.js" type="text/javascript"></script>
+   <link rel="stylesheet" type="text/css" href="./css/styleTop.css"/>
+</head>
+
+<body>
+	<div id="box">
+		<img src="img/logo.jpg" alt="latinAmerica"/>
+	</div>
+	
+	<div id="box1">
+		<h1>Mochileros -  Latin America Travel</h1>
+	</div>
+<div id="box2">
+  <table>
+      <tr>
+        <td>
+          <h3>Member Login</h3>
+              <form name="login_form" method="post">
+              <table>
+                  <tr>
+                    <td>Username: </td>
+                    <td>
+					<input type="text" maxlength="20" name="username" size="20"/></td>
+                  </tr>
+                  <tr>
+                    <td>Password: </td>
+					<td><input maxlength="20" name="password" size="20" type="password"/></td>
+                  </tr>
+                  <tr>
+						<td colspan="2"><input id="loggin" type="button" value="Login" name="authenticate" onclick="login()"/></td>
+                  </tr>
+              </table>
+             </form>
+        </td>
+      </tr>
+  </table>
+</div>
+
+
+
+</body>
+
+</html>

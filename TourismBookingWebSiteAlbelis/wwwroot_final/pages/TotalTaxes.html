@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Name: Albelis Becea
+Date: July 21, 2021
+Description: Displays the value according to the selection on the Booking page using Cookies and calculate the final price with taxes included -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+
+<head>
+<title>Mochileros - Latin America - Calculating Price</title>
+<link rel="stylesheet" type="text/css" href="../css/stylepage.css">
+<script src="../js/javascript.js" type="text/javascript"></script>
+
+</head>
+
+<body onload="calculatetaxes()">
+	<div id="headr">
+	
+		<h1> Final Price</h1>
+	</div>
+	<div>
+	
+		<table id="taxesbox">
+				<tr><th colspan="2">Final Price</th>
+				</tr>
+				<tr>
+					<td colspan="2"><b>You travel to <span id="countr"></span> is for <span id="dispPrice1"></span>. Taxes are calculated as follows:</b></td>
+				</tr>
+				<tr>
+					<td>Selling price</td>
+					<td id="dispPrice"></td>
+				</tr>		
+				<tr>
+					<td>GST ($<span id="totval"></span> × <span id="t1"></span>%)</td>
+					<td id="gst"></td>
+				</tr>
+				<tr>
+					<td>QST ($<span id="totval2"></span> × <span id="t2"></span>%)</td>
+					<td id="qst"></td>
+				</tr>	
+				<tr>
+					<td style="font-weight:bold;">Total</td>
+					<td id="total" style="font-weight:bold;"></td>
+				</tr>
+				<!--<tr>
+				<td colspan="2" style="text-align:center;"><a href="Booking.html">Go Back to Booking Page</a></td>
+				</tr>-->
+		</table>
+		
+	</div>
+		<!--<p id="pt1">....</p>
+		<p id="pt2">....</p>-->
+	<div id="footer">
+		<p>Copyrigth © 2021 Albelis Becea</p>
+	</div>
+</body>
+</html>

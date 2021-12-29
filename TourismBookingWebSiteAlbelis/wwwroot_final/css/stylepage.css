@@ -1,0 +1,269 @@
+body{
+	
+	background-color:#ffe5cc;
+	color:#555;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	margin:0;
+}
+
+
+#headr{
+	background-image: url("../img/angelfall.jpg");
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	margin:0;
+	width:100%;
+	height:120px;
+	opacity: 0.8;
+}
+#headr h1{
+	padding-top:60px;
+	color:white;
+	text-shadow:4px 2px #992600;
+	font-size:40px;
+	padding:30px;
+	margin:0;
+}
+#boxes{
+	margin-top:50px;
+}
+#container{
+	margin-left:auto;
+	margin-right:auto;
+	padding:50px;
+}
+.box p, .destinationcont p{
+	text-align:justify;
+}
+.box, .destinationcont{
+	
+	float:left;
+	width:29.3%;
+	padding:20px;
+	box-sizing:border-box;
+	text-align:center;
+	line-height:25px;
+	margin-left: 30px;
+	min-width:300px;
+}
+.destinationcont img{
+	width:300px;
+}
+
+.box img{
+	width:300px;
+	height:310px;
+   /* position:center;	*/
+}
+#containerbox{
+	border:5px dotted #008080;
+	padding:30px;
+	background-color:#fff2e6;
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	font-size:20px;
+	line-height:30px;
+	text-align:justify;
+	
+}
+#footer{
+	padding:20px;
+	width:100%;
+	height:60px;
+	text-align:center;
+	background-color:#008080;
+	color:white;
+}
+#Headersect{
+	font-size:20px;
+	text-shadow:4px 2px #992600;
+	padding:20px;
+	width:100%;
+	height:60px;
+	background-color:#008080;
+	color:white;
+	
+}
+#contactinfo{
+	padding:10px;
+	color:#008080;
+	text-align:justify;
+	font-size:25px;
+	font-weight:bold;}
+.boxcontact, .booking{
+	float:left;
+	width:45.3%;
+	min-width:400px;
+	padding:20px;
+	box-sizing:border-box;
+	text-align:center;
+	line-height:25px;
+
+}
+.booking h2{text-align:left;
+padding:10px;}
+#hours{list-style-image: url('../img/clock.JPG');}
+
+form{
+	
+	padding:20px;
+}
+
+.form-grp{
+	
+	padding-bottom:15px;
+	
+}
+
+.form-grp label{
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	text-align:justify;
+}
+
+.form-grp input,
+.form-grp textarea{
+	
+	padding:10px;
+	width:80%;
+	
+	
+}
+
+
+input[type="submit"]{
+	
+	background-color:#008080;
+	color:#fff;
+	padding:12px 25px;
+	border:none;
+	border-radius:10px;
+	cursor:pointer;
+}
+
+input[type="submit"]:hover{
+	background-color:#399699;
+	text-transform:uppercase;
+}
+
+.clr{
+	clear:both;
+}
+#pagecontn{
+width:70%;
+margin-left:auto;
+margin-right:auto;
+margin-top:50px;
+text-align:center;
+line-height:35px;
+
+padding:20px 50px 20px 50px;
+
+}
+.destinationbox{
+	padding:50px;
+	line-height:30px;
+	
+}
+.destinationbox h2{
+	padding:20px;
+	
+}
+.hotels{
+	width:100%;
+	text-align:center;
+	
+}
+.hotels th, .hotels td{
+	border: 1px solid #008080; 
+	font-size:12px;
+	background-color:#fff2e6;
+}
+.hotels p{
+	font-size:10px;
+}
+#imgsearch{
+	width:150px;
+	height:150px;
+	padding:15px;
+	margin:0;
+}
+.smallbox{
+	float:left;
+	box-sizing:border-box;
+}
+.smallbox p{
+	margin:0;
+	padding:15px;
+	width:600px;
+	min-width:300px;
+	font-size:12px;
+	line-height:30px;
+	text-align:justify;
+	color:white;
+}
+a{
+	font-size:13px;
+	padding:10px;
+}
+#kwsearchr{
+	width:100%;
+	padding:25px 0 25px 25px;
+	background-color:#556B2F;
+}
+#newsletter h2{
+	display:inline;
+	padding-right:20px;
+	text-shadow:2px 1px #556B2F;
+	color:white;
+}
+#newsletter label{
+	color:#fff2e6;
+}
+
+#subsbtn{
+	margin-right:150px;
+}
+#newsletter{
+	width:100%;
+	margin-right:50px;
+	/*padding:25px 0 25px 25px;*/
+	background-color:#008080;
+	text-align:right;
+	
+}
+#reservation, #displaytable{
+	
+	
+	margin-left:100px;
+	line-height:50px;
+	text-align:left;
+	padding:60px;
+	/*border: 2px dotted #008080;*/
+	font-weight:bold;
+	font-size:90%;
+
+}
+#reservation{width:70%;}
+#displaytable{width:80%;}
+#taxesbox, #messgboxdisp{
+	width:400px;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:15px;
+	line-height:40px;
+	margin-bottom:290px;
+	background-color:#fff2e6;
+	border: 2px dotted #008080;
+}
+#refebox{
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:30px;
+	
+}

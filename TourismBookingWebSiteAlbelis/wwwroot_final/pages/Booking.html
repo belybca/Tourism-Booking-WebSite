@@ -1,0 +1,323 @@
+<!--
+Description: Project Web Client Development 30%
+			 Booking : This page contains the Hotels information allows the user to do a search of keywords, subscribe to a newsletter
+			 and do a booking or reservation. 
+			 Cookies and Regular expresions are used. JavaScript and Jquery
+Name: Albelis Becea
+ID: 2110083
+Date: July 23, 2021
+VALIDATED 1 error input type="email"
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+
+<head>
+<title>Mochileros - Latin America - Booking Page</title>
+<link rel="stylesheet" type="text/css" href="../css/stylepage.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/javascript.js" type="text/javascript"></script>
+
+</head>
+
+<body onload="hide()">
+
+	<div id="headr">
+	
+		<h1> Booking Page</h1>
+	</div>
+	<div>
+		<div id="kwsearchr">
+			<input type="text" id="srch"></input>
+			<button onclick="searchWords()">Search Keywords</button><br/>
+		
+			<div id="smallcontainer">
+				<div class="smallbox">
+					<img id="imgsearch" src="" alt=""/>
+				</div>
+				<div class="smallbox">	
+					<p id="description"></p>
+					<p><a id="more" href="" target="_blank">Click Here for more information</a></p>
+				</div>	
+				<div class="clr"></div>
+			</div>
+			
+		</div>
+		<div id="newsletter">
+			
+			<form action="/action_page.php" method="post">
+				<h2>Subscribe to our News Letter</h2>
+				<label for="em">Email address : </label>
+				<input type="email" id="em" name="email"></input>
+				<input id="subsbtn" type="button" onclick="subscribe()" value="Subscribe"></input>
+			</form>
+			<!--<button onclick="subscribe()">Subscribe</button>-->
+		</div>
+		
+		
+		<div class="booking">
+			<h2>Where to Stay</h2>
+			<table class="hotels">
+				<tr>
+					<th colspan="5">Venezuela</th>
+				</tr>
+				<tr>
+					<th>Destination</th>
+					<th>Hotel</th>
+					<th>Stars</th>
+					<th>Description</th>
+					<th>Price CAD</th>
+				</tr>
+				<tr>
+					<td rowspan="2">Angel Falls</td>
+					<td>Waku Lodge</td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="tours">tours</span>,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p1">200</td>
+				</tr>
+				<tr>
+					<td>Tapuy Lodge </td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p2">150</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Morrocoy National Park</td>
+					<td>Ardileña Hotel </td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="tours">tours</span>,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p3">220</td>
+				</tr>
+				<tr>
+					<td>Posada Los Cocos</td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="pet">pets</span>allowed,  <span class="wifi">Wifi</span></p></td>
+					<td id="p4">210</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Médanos de Coro National Park</td>
+					<td>Hotel Amazonia Park</td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p5">200</td>
+				</tr>
+				<tr>
+					<td>Eurobuilding Hotel<p></p></td>
+					<td>5</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="pet">pets</span> allowed,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="spa">Spa</span>, <span class="park">parking</span>, <span class="rest">Restaurant</span></p></td>
+					<td id="p6">320</td>
+				</tr>
+			</table>
+			<table class="hotels">
+				<tr>
+					<th colspan="5">Colombia</th>
+				</tr>
+				<tr>
+					<th>Destination</th>
+					<th>Hotel</th>
+					<th>Stars</th>
+					<th>Description</th>
+					<th>Price CAD</th>
+				</tr>
+				<tr>
+					<td rowspan="2">Chiribiquete National Park</td>
+					<td>Kali Hotel</td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="pet">pets</span> allowed,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span>, <span class="rest">Restaurant</span></p></td>
+					<td id="p7">200</td>
+				</tr>
+				<tr>
+					<td>Kantawa Spa Hotel</td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="spa">Spa</span>, <span class="wifi">Wifi</span></p></td>
+					<td id="p8">100</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Tayrona National Natural Park</td>
+					<td>Posada Villa Maria</td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p9">210</td>
+				</tr>
+				<tr>
+					<td>Hotel Gran Marquise</td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p10">300</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Bogota</td>
+					<td>Hotel Bogota</td>
+					<td>3</td>
+					<td class="amenit"><p> <span class="pet">pets</span> allowed,  <span class="wifi">Wifi</span>, <span class="park">parking</span></p></td>
+					<td id="p11">100</td>
+				</tr>
+				<tr>
+					<td>Hotel Las Torres<p></p></td>
+					<td>5</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="pet">pets</span> allowed,  <span class="wifi">Wifi</span>, <span class="pool">Pool</span>, <span class="park">parking</span>, <span class="rest">Restaurant</span></p></td>
+					<td id="p12">280</td>
+				</tr>
+			</table>
+			<table class="hotels">
+				<tr>
+					<th colspan="5">Brazil</th>
+				</tr>
+				<tr>
+					<th>Destination</th>
+					<th>Hotel</th>
+					<th>Stars</th>
+					<th>Description</th>
+					<th>Price CAD</th>
+				</tr>
+				<tr>
+					<td rowspan="2">Rio de Janeiro</td>
+					<td>Hilton Rio</td>
+					<td>5</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="tours">tours</span>,  <span class="wifi">Wifi</span>, <span class="spa">Spa</span>, <span class="pool">Pool</span>, <span class="park">parking</span>, <span class="rest">Restaurant</span>, <span class="tours">tours</span></p></td>
+					<td id="p13">220</td>
+				</tr>
+				<tr>
+					<td>Lambada Hotel </td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="tours">tours</span>, <span class="pool">Pool</span>, <span class="park">parking</span></p></td>
+					<td id="p14">170</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Fernando de Noronha</td>
+					<td>Posada Lua Nova  </td>
+					<td>3</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="wifi">Wifi</span>, <span class="tours">tours</span>, <span class="pet">pets</span> allowed</p></td>
+					<td id="p15">180</td>
+				</tr>
+				<tr>
+					<td>Portões do Sol Hotel</td>
+					<td>4</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>,  <span class="tours">tours</span>,  <span class="pets">pets</span> allowed, <span class="pool">Pool</span></p></td>
+					<td id="p16">250</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Iguazu Falls, Paraná</td>
+					<td>Posada Amazonia Park</td>
+					<td>5</td>
+					<td class="amenit"><p><span class="break">Breakfast</span>, <span class="wifi">Wifi</span>, <span class="spa">Spa</span>, <span class="pool">Pool</span>, <span class="park">parking</span>, tour</p></td>
+					<td id="p17">280</td>
+				</tr>
+				<tr>
+					<td>Posada Rio Azul<p></p></td>
+					<td>3</td>
+					<td class="amenit"><p> <span class="pet">pets</span> allowed, <span class="park">parking</span>, <span class="wifi">Wifi</span></p></td>
+					<td id="p18">80</td>
+				</tr>
+			</table>
+		</div>
+		<div class="booking">
+			<h2>Start a Booking</h2>
+			<p><b>Please note</b><br/>Due to the recent restrictions by covid 19 the only destinations available at the moment are Venezuela, Colombia and Brazil </p>
+			<p><b>Booking Availability</b><br/>Reservations are only available for the remainder of the year, from August to December </p>
+			
+			<table id="reservation">
+				<tr>
+					<td><label for="nam">Full Name : </label></td>
+					<td><input id="nam" type="text" name="name"></input></td>
+				</tr>
+								
+				<tr>
+					<td colspan="2" style="text-align:center"> Select a date</td>
+				</tr>
+				<tr>
+					<td><label for="start">From (YYYY-MM-DD):</label></td>
+					<td><label for="end">To (YYYY-MM-DD):</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="start" name="firstday"/></td>
+					<td><input type="text" id="end" name="lastday"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p id="emessage2" style="color:red"></p></td>
+				</tr>
+				<tr>
+					<td><label for="ctry">Select a Country</label></td>
+					<td><select name="country" id="ctry" onchange="javascript:dynamicdropdown(this.options[this.selectedIndex].value);">
+						   <option value="Select_Option">Select Option</option>
+						  <option value="Venezuela">Venezuela</option>
+						  <option value="Colombia">Colombia</option>
+						  <option value="Brazil">Brazil</option>
+						  <option value="Peru">Peru</option>
+						  <option value="Ecuador">Ecuador</option>
+						  <option value="Bolivia">Bolivia</option>
+						  <option value="Argentina">Argentina</option>
+						  <option value="Chile">Chile</option>
+						  <option value="Paraguay">Paraguay</option>
+						  <option value="Uruguay">Uruguay</option>
+						</select></td>
+				</tr>
+				<tr>
+							
+					<td><label for="destination">Select Destination</label></td>
+					<td>
+						<select id="destin" name="destination" onchange="javascript:dynamicdropdown2(this.options[this.selectedIndex].value);">
+						 <option value="selectOption">Select Option</option>					 
+						 <option value="Angel Falls">Angel Falls</option>
+						  <option value="Morrocoy N P">Morrocoy NP</option>
+						  <option value="Colombia">Médanos de Coro NP</option>
+						</select>
+						
+						</td>
+				</tr>
+				<tr>
+					<td><label for="hotel">Select a Hotel</label></td>
+					<td><select id="hotel" name="Hotel">
+						  <option value="selectOption">Select Option</option>
+						  <option value="Venezuela">Waku Lodge</option>
+						  <option value="Colombia">Tapuy Lodge</option>
+						</select></td>
+				</tr>
+				</table>
+		
+			<button onclick="DisplaySelection()" style="padding:10px;">Check Selection</button>
+			<table id="displaytable">
+				<tr>
+					<td colspan="2">Your Selection</td>
+				</tr>
+				<tr>
+					<td>Country: </td>
+					<td id="contryselecd" style="width:200px;"></td>
+				</tr>
+				<tr>
+					<td>Destination: </td>
+					<td id="destselecd"></td>
+				</tr>
+				<tr>
+					<td>Hotel: </td>
+					<td id="hotelselecd"></td>
+				</tr>
+				<tr>
+					<td>Days of stay </td>
+					<td id="daysstay"></td>
+				</tr>
+				<tr>
+					<td>Price per Night</td>
+					<td id="pricehotel"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">Your total before taxes is</td>
+					<td><span id="total1"></span> CAD</td>
+				</tr>
+			</table>
+			
+			<a id="linkprice" href="TotalTaxes.html" onclick="Setprice()">Click here to see the final price</a>
+			
+		</div>
+	</div>
+	<div class="clr"></div>
+	<div id="footer">
+				<p>Copyrigth © 2021 Albelis Becea</p>
+	</div>
+	
+</body>
+</html>

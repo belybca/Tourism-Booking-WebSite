@@ -1,0 +1,102 @@
+<!-- 
+Name: Albelis Becea
+Date: July 21, 2021
+Description: Cookies for Contact Us Web page for Mochileros Travel-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+
+<head>
+<title>Mochileros - Latin America - Message Information Page</title>
+<link rel="stylesheet" type="text/css" href="../css/stylepage.css"/>
+<!--<script src="../js/javascript.js" type="text/javascript">-->
+<script type="text/javascript">
+	function getCookie(cookie) {
+				  let amount = cookie + "=";
+				  let decodedCookie = decodeURIComponent(document.cookie);
+				  let ca = decodedCookie.split(';');
+				  for(let i = 0; i <ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+					  c = c.substring(1);
+					}
+					if (c.indexOf(amount) == 0) {
+				  return c.substring(amount.length, c.length);
+				}
+			  }
+			  return "";
+		}
+		
+	function gettingValues(){
+		var name;
+		name=getCookie("cnamec");
+		document.getElementById("usrName").innerHTML=name;
+		document.getElementById("usrEmail").innerHTML=getCookie("cemailc");
+		document.getElementById("usrPhone").innerHTML=getCookie("cPhone");
+		document.getElementById("locationSelect").innerHTML=getCookie("cradiosele");
+		document.getElementById("deptSelect").innerHTML=getCookie("cDpt");
+		document.getElementById("usrMessage").innerHTML=getCookie("cMssg");
+		document.getElementById("timeSecs").innerHTML=getCookie("ctimesec");
+		document.getElementById("timemints").innerHTML=getCookie("ctimemin");
+	}	
+</script>
+	
+</head>
+<body onload="gettingValues()">
+	<div id="Headersect">
+		<h1>User Message</h1>
+	</div>
+	<div>
+		<table id="messgboxdisp">
+			<tr>
+				<td colspan="2" style="text-align:center;"><b>Message</b></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td id="usrName"></td>
+			</tr>
+            <tr>			
+				<td>Email:</td>
+				<td id="usrEmail"></td>
+			</tr>
+            <tr>
+				<td>Phone Number:</td>
+				<td id="usrPhone"></td>
+			</tr>
+			<tr>
+				<td>Location Selected:</td>
+				<td id="locationSelect"></td>
+			</tr>
+            <tr>			
+				<td>Department Selected:</td>
+				<td id="deptSelect"></td>
+			</tr>
+            <tr>
+				<td>User Message:</td>
+				<td id="usrMessage"></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center;"><b>Time to Fill the Form</b></td>
+			</tr>
+			<tr>
+				<td>Time Seconds:</td>
+				<td id="timeSecs"></td>
+			</tr>
+			<tr>
+				<td>Time Minutes:</td>
+				<td id="timemints"></td>
+			</tr>
+			<!--<tr>
+				<td colspan="2" style="text-align:center;"><a href="ContactUs.html">Go Back</a></td>
+			</tr>-->
+		</table>
+			
+	</div>
+	
+	<div id="footer">
+			<p>Copyrigth © 2021 Albelis Becea</p>
+	</div>
+</body>
+</html>

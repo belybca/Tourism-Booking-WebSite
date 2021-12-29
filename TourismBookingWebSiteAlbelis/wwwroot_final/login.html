@@ -1,0 +1,61 @@
+<!--
+Description: Project Web Client Development 30%
+			 IndexMenu : This page contains the login section
+Name: Albelis Becea
+ID: 2110083
+Date: July 23, 2021
+VALIDATED
+-->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script language="javascript" src="login.js" type="text/javascript"></script>
+    <title>Members Only Login</title>
+</head>
+
+<body>
+   
+    <div id="loginbox">
+        <table>
+            <tbody>
+				<tr>
+                    <td valign="top" width="384">
+                    <h1>Member Login</h1>
+                    <form name="login_form" method="post">
+					   <table width="319">
+						<tbody>
+							<tr>
+								<td width="50">Username</td>
+								<td width="255">
+									<input type="text" maxlength="10" name="username" size="20" />
+								</td>
+							</tr>
+							<tr>
+								<td width="50">Password</td>
+								<td width="255"><input maxlength="10" name="password" size="20" type="password" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="button" value="login" name="authenticate" onclick="authenticate_login()" /></td>
+							</tr>
+						</tbody>
+					   </table>
+                    </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+
+</html>

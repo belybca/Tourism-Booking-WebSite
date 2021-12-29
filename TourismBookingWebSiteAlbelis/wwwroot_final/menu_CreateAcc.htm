@@ -1,0 +1,50 @@
+<!--
+Description: Project Web Client Development 30%
+			 Menu_CreateAcc : This page displays the create account form 
+Name: Albelis Becea
+ID: 2110083
+Date: July 23, 2021
+VALIDATED 1 error type="email" not accepted
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en">
+<head>
+   <title>Menu LogOut</title>
+   <style type="text/css">
+		body{
+		background-color:#cc9900;
+		}
+   </style>
+</head>
+
+<body>
+	<p>Please log in to have access to all the destinations.<br/><br/> Or Create an Account</p>
+	<!--I didn't impement cookies or regex here because they are used in page 4 and page 5-->
+	<form  name="frma" method="post">
+					
+			<div class="form-grp">
+				<label for="nam">Name: </label><br/>
+				<input id="nam" type="text" name="name"/>
+			</div>
+			<div class="form-grp">
+				<label for="em">Email: </label><br/>
+				<input id="em" type="email" name="email"/>
+			</div>
+			<div class="form-grp">
+				<label for="usrname">Username: </label><br/>
+				<input id="usrname" type="text" name="username"/>
+			</div>
+			<div class="form-grp">
+				<label for="pss">Password: </label><br/>
+				<input id="pss" type="password" name="password"/>
+			</div>
+			<input type="submit" value="Submit"/>
+		</form>
+	<a href="https://www.google.com/" target="_blank">Google</a>
+
+</body>
+
+</html>
